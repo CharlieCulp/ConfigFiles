@@ -1,3 +1,3 @@
 # ConfigFiles
 
-These are congiration files.
+These are configuration files.
