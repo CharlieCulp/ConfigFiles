@@ -1,3 +1,3 @@
 # ConfigFiles
 
-These are congiration files primarliy from home Linux machines.
+These are congiration files.
