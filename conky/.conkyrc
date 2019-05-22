@@ -45,7 +45,7 @@ own_window_type normal
     ${font Ariel Black:size:24}${alignc} ${time %r}${font}
     ${alignc}${Time %a %b %d %Y}
     System ${hr 2}
-    Distro ${alignr}Debian 9
+    Distro ${alignr}Debian Stable
     Kernel ${alignr}$sysname $kernel on $machine
     Hostname $alignr $nodename
     Uptime $alignr $uptime
@@ -68,16 +68,17 @@ own_window_type normal
     ${color ff0000}${fs_bar /home}${color}    
     Disk1 $alignc ${fs_used /disk1} / ${fs_size /disk1} $alignr ${fs_used_perc /disk1}%
     ${color ff0000}${fs_bar /disk1}${color}        
-    Network ${hr 2}
-# Debian 9 change:
-    #${alignc}  eth0 ${addr eth0}    
+    Network ${hr 2}    
+    External IP: ${exec wget http://ipinfo.io/ip -qO -}
+    Internal IP: ${addr enp0s25}
+
+    #${alignl} eth0 ${addr eth0}    
     #Inbound $alignr ${downspeed eth0} kb/s
     #${downspeedgraph eth0 33ffcc 000099}
     #Outbound $alignr ${upspeed eth0} kb/s
     #${upspeedgraph eth0 ffcc00 ff0000}
     #Upload: ${alignr}${totalup eth0}
     #Download: ${alignr}${totaldown eth0}
-    ${alignc} enp0s25 ${addr enp0s25}
     Inbound $alignr ${downspeed enp0s25} kb/s
     ${downspeedgraph enp0s25 33ffcc 000099}
     Outbound $alignr ${upspeed enp0s25} kb/s
@@ -93,6 +94,7 @@ own_window_type normal
     ${top name 2} $alignr ${top pid 2} ${top cpu 2} ${top mem 2}
     ${top name 3} $alignr ${top pid 3} ${top cpu 3} ${top mem 3}
     ${top name 4} $alignr ${top pid 4} ${top cpu 4} ${top mem 4}
+    ${top name 5} $alignr ${top pid 5} ${top cpu 5} ${top mem 5}
     
 #    St. Paul, MN ${hr 2}
 # ${font Open Sans Light:size=70}${alignc}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°${font}${voffset -30
