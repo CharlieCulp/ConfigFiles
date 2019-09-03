@@ -71,8 +71,8 @@ own_window_type normal
     ${color ff0000}${fs_bar /}${color}
     Home $alignc ${fs_used /home} / ${fs_size /home} $alignr ${fs_used_perc /home}%
     ${color ff0000}${fs_bar /home}${color}    
-    Disk1 $alignc ${fs_used /disk1} / ${fs_size /disk1} $alignr ${fs_used_perc /disk1}%
-    ${color ff0000}${fs_bar /disk1}${color}        
+    # Disk1 $alignc ${fs_used /disk1} / ${fs_size /disk1} $alignr ${fs_used_perc /disk1}%
+    # ${color ff0000}${fs_bar /disk1}${color}        
    
     Network ${hr 2}    
     External IP: ${exec wget http://ipinfo.io/ip -qO -}
