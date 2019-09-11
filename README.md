@@ -1,3 +1,3 @@
 # Assortment of configuration files
 
-These are mainly dot files from my main Linux server.
+These are mainly dot files from my home Linux server and Linux laptop.
