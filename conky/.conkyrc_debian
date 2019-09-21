@@ -79,9 +79,9 @@ own_window_type normal
     #${upspeedgraph eth0 ffcc00 ff0000}
     #Upload: ${alignr}${totalup eth0}
     #Download: ${alignr}${totaldown eth0}
-    Inbound $alignr ${downspeed enp0s25} kb/s
+    Inbound $alignr ${downspeed enp0s25}
     ${downspeedgraph enp0s25 33ffcc 000099}
-    Outbound $alignr ${upspeed enp0s25} kb/s
+    Outbound $alignr ${upspeed enp0s25}
     ${upspeedgraph enp0s25 ffcc00 ff0000}
     Upload: ${alignr}${totalup enp0s25}
     Download: ${alignr}${totaldown enp0s25}
