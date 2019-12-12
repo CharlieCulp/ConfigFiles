@@ -96,5 +96,9 @@ own_window_type normal
     ${top name 4} $alignr ${top pid 4} ${top cpu 4} ${top mem 4}
     ${top name 5} $alignr ${top pid 5} ${top cpu 5} ${top mem 5}
     
-#    St. Paul, MN ${hr 2}
-# ${font Open Sans Light:size=70}${alignc}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°${font}${voffset -30
+   Internal Temp ${hr 2}
+  ${execi 1 sensors -u | grep -A 0 'temp2_input' | cut -c 15-19} C
+  #${execi 1 sensors -u | grep -A 1 'temp2_input' | cut -c 15-19} C
+    #${execgraph "sensors | grep 'Core 0' | awk '{print $3}' | cut -b2,3"}
+    #${execgraph "sensors | grep 'Core 1' | awk '{print $3}' | cut -b2,3"}
+
