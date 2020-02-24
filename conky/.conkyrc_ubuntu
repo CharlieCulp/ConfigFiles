@@ -77,10 +77,9 @@ own_window_type normal
     Network ${hr 2}    
     External IP: ${exec wget http://ipinfo.io/ip -qO -}
     Internal IP: ${addr wlp3s0}
-    #${alignl} eth0 ${addr eth0}    
-    #Inbound $alignr ${downspeed eth0} kb/s
+    Inbound $alignl ${downspeed wlp3s0} kb/s
     #${downspeedgraph eth0 33ffcc 000099}
-    #Outbound $alignr ${upspeed eth0} kb/s
+    Outbound $alignl ${upspeed wlp3s0} kb/s
     #${upspeedgraph eth0 ffcc00 ff0000}
     #Upload: ${alignr}${totalup eth0}
     #Download: ${alignr}${totaldown eth0}
@@ -102,4 +101,9 @@ own_window_type normal
     ${top name 5} $alignr ${top pid 5} ${top cpu 5} ${top mem 5}
 
     Internal Temp ${hr 2}
-    ${hwmon 2 temp 1}°F
+    ${execi 1 sensors -u | grep -A 1 'temp2_input' | cut -c 15-19}
+
+   
+ 
+
+
