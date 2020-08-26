@@ -45,7 +45,7 @@ own_window_type normal
     ${font Ariel Black:size:24}${alignc} ${time %r}${font}
     ${alignc}${Time %a %b %d %Y}
     System ${hr 2}
-    Distro ${alignr}Ubuntu 18.04 LTS
+    Distro ${alignr}Ubuntu 20.04.1 LTS
     Kernel ${alignr}$sysname $kernel on $machine
     Hostname $alignr $nodename
     Uptime $alignr $uptime
